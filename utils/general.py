@@ -52,7 +52,9 @@ VERBOSE = str(os.getenv('YOLOv5_VERBOSE', True)).lower() == 'true'  # global ver
 TQDM_BAR_FORMAT = '{l_bar}{bar:10}{r_bar}'  # tqdm bar format
 FONT = 'Arial.ttf'  # https://ultralytics.com/assets/Arial.ttf
 
-torch.set_printoptions(linewidth=320, precision=5, profile='long')
+#change torch set for printing bounding box xy 
+torch.set_printoptions(sci_mode=False,linewidth=320, precision=1, profile='int')
+# torch.set_printoptions(linewidth=320, precision=5, profile='long')
 np.set_printoptions(linewidth=320, formatter={'float_kind': '{:11.5g}'.format})  # format short g, %precision=5
 pd.options.display.max_columns = 10
 cv2.setNumThreads(0)  # prevent OpenCV from multithreading (incompatible with PyTorch DataLoader)

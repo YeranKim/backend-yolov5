@@ -153,7 +153,184 @@ def run(
             if len(det):
                 # Rescale boxes from img_size to im0 size
                 det[:, :4] = scale_boxes(im.shape[2:], det[:, :4], im0.shape).round()
+                 print('\n')
+                
+                # total number of frames of video
+                # totalFrame = int(vid_cap.get(cv2.CAP_PROP_FRAME_COUNT)) 
+                
+                time = vid_cap.get(cv2.CAP_PROP_POS_MSEC)
+                print('\n')
+                print('%d ms'% round(time_ms,2))
+               
+                
+                print('{:<15} {:<10} {:<10} {:<10} {:<10} {:<15}'.format('class', 'x1', 'y1', 'x2', 'y2', 'accuracy'))
+                print('\n')
 
+                for j in range(0,det.size(0)):
+                  if det[j,5] == 0:
+                    name = "person"
+                  if det[j,5] == 1:
+                    name = "bicycle"
+                  if det[j,5] == 2:
+                    name = "car"
+                  if det[j,5] == 3:
+                    name = "motorcycle"
+                  if det[j,5] == 4:
+                    name = "airplane"
+                  if det[j,5] == 5:
+                    name = "bus"
+                  if det[j,5] == 6:
+                    name = "train"
+                  if det[j,5] == 7:
+                    name = "truck"
+                  if det[j,5] == 8:
+                    name = "boat"
+                  if det[j,5] == 9:
+                    name = "traffic light"
+                  if det[j,5] == 10:
+                    name = "fire hydrant"
+                  if det[j,5] == 11:
+                    name = "stop sign"
+                  if det[j,5] == 12:
+                    name = "parking meter"
+                  if det[j,5] == 13:
+                    name = "bench"
+                  if det[j,5] == 14:
+                    name = "bird"
+                  if det[j,5] == 15:
+                    name = "cat"
+                  if det[j,5] == 16:
+                    name = "dog"
+                  if det[j,5] == 17:
+                    name = "horse"
+                  if det[j,5] == 18:
+                    name = "sheep"
+                  if det[j,5] == 19:
+                    name = "cow"
+                  if det[j,5] == 20:
+                    name = "elephant"
+                  if det[j,5] == 21:
+                    name = "bear"
+                  if det[j,5] == 22:
+                    name = "zebra"
+                  if det[j,5] == 23:
+                    name = "giraffe"
+                  if det[j,5] == 24:
+                    name = "backpack"
+                  if det[j,5] == 25:
+                    name = "umbrella"
+                  if det[j,5] == 26:
+                    name = "handbag"
+                  if det[j,5] == 27:
+                    name = "tie"
+                  if det[j,5] == 28:
+                    name = "suitcase"      
+                  if det[j,5] == 29:
+                    name = "frisbee"
+                  if det[j,5] == 30:
+                    name = "skis"
+                  if det[j,5] == 31:
+                    name = "snowboard"
+                  if det[j,5] == 32:
+                    name = "sports ball"
+                  if det[j,5] == 33:
+                    name = "kite"
+                  if det[j,5] == 34:
+                    name = "baseball bat"
+                  if det[j,5] == 35:
+                    name = "baseball glove"
+                  if det[j,5] == 36:
+                    name = "skateboard"
+                  if det[j,5] == 37:
+                    name = "surfboard"
+                  if det[j,5] == 38:
+                    name = "tennis racket"
+                  if det[j,5] == 39:
+                    name = "bottle"
+                  if det[j,5] == 40:
+                    name = "wine glass"
+                  if det[j,5] == 41:
+                    name = "cup"
+                  if det[j,5] == 42:
+                    name = "fork"
+                  if det[j,5] == 43:
+                    name = "knife"
+                  if det[j,5] == 44:
+                    name = "spoon"
+                  if det[j,5] == 45:
+                    name = "bowl"
+                  if det[j,5] == 46:
+                    name = "banana"
+                  if det[j,5] == 47:
+                    name = "apple"
+                  if det[j,5] == 48:
+                    name = "sandwich"
+                  if det[j,5] == 49:
+                    name = "orange"
+                  if det[j,5] == 50:
+                    name = "broccoli"
+                  if det[j,5] == 51:
+                    name = "carrot"
+                  if det[j,5] == 52:
+                    name = "hot dog"
+                  if det[j,5] == 53:
+                    name = "pizza"
+                  if det[j,5] == 54:
+                    name = "donut"
+                  if det[j,5] == 55:
+                    name = "cake"
+                  if det[j,5] == 56:
+                    name = "chair"
+                  if det[j,5] == 57:
+                    name = "couch"
+                  if det[j,5] == 58:
+                    name = "potted plant"
+                  if det[j,5] == 59:
+                    name = "bed"
+                  if det[j,5] == 60:
+                    name = "dining table"
+                  if det[j,5] == 61:
+                    name = "toilet"
+                  if det[j,5] == 62:
+                    name = "tv"
+                  if det[j,5] == 63:
+                    name = "laptop"
+                  if det[j,5] == 64:
+                    name = "mouse"
+                  if det[j,5] == 65:
+                    name = "remote"
+                  if det[j,5] == 66:
+                    name = "keyboard"
+                  if det[j,5] == 67:
+                    name = "cell phone"
+                  if det[j,5] == 68:
+                    name = "microwave"
+                  if det[j,5] == 69:
+                    name = "oven"
+                  if det[j,5] == 70:
+                    name = "toaster"
+                  if det[j,5] == 71:
+                    name= "sink"
+                  if det[j,5] == 72:
+                    name = "refrigerator"
+                  if det[j,5] == 73:
+                    name = "book"
+                  if det[j,5] == 74:
+                    name = "clock"
+                  if det[j,5] == 75:
+                    name = "vase"                      
+                  if det[j,5] == 76:
+                    name = "scissors"
+                  if det[j,5] == 77:
+                    name = "teddy bear"
+                  if det[j,5] == 78:
+                    name = "hiar drier"
+                  if det[j,5] == 79:
+                    name = "toothbrush"
+                  print('{:<15} {:<10} {:<10} {:<10} {:<10} {:<10}'.format(name, det[j,0], det[j,1], det[j,2], det[j,3], det[j,4]))
+
+                print('\n') 
+                
                 # Print results
                 for c in det[:, 5].unique():
                     n = (det[:, 5] == c).sum()  # detections per class

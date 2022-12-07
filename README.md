@@ -5,6 +5,8 @@
 
 ## 프로젝트 소개
 
+![sample_detection (1) (online-video-cutter com) (1)](https://user-images.githubusercontent.com/65602906/206127633-04e811ef-64f4-4329-88a2-caacd0d15c1f.gif)
+
 - 동영상 파일을 detect하면 객체를 인식하여 보여줍니다
 - 프레임마다 인식된 객체의 이름, Bounding Box 좌표, 정확도를 시간과 함께 출력합니다
 

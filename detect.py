@@ -153,12 +153,13 @@ def run(
             if len(det):
                 # Rescale boxes from img_size to im0 size
                 det[:, :4] = scale_boxes(im.shape[2:], det[:, :4], im0.shape).round()
-                 print('\n')
+                
+                print('\n')
                 
                 # total number of frames of video
                 # totalFrame = int(vid_cap.get(cv2.CAP_PROP_FRAME_COUNT)) 
                 
-                time = vid_cap.get(cv2.CAP_PROP_POS_MSEC)
+                time_ms = vid_cap.get(cv2.CAP_PROP_POS_MSEC)
                 print('\n')
                 print('%d ms'% round(time_ms,2))
                

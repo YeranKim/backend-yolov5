@@ -27,3 +27,4 @@
 1. 'seeyoutube-backend-sample' repository에서 ObjectDetection.ipynb를 들어가 'Colab에서 열기' 버튼을 클릭합니다.
 2. 작성되어 있는 명령어를 순서대로 실행시킵니다.
 3. 마지막 detect 명령어를 실행하면 실시간으로 샘플 동영상이 detection되면서 객체 데이터가 출력되는 것을 확인할 수 있습니다. 
+4. detect된 동영상 파일은 마지막 detect 명령어 실행 결과창의 마지막 줄에 적혀 있는 파일에 들어가 다운로드하여 확인할 수 있습니다.

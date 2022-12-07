@@ -10,6 +10,12 @@
 
 </br>
 
+## 준비사항
+
+- Google Colab에 접속할 Google ID
+
+</br>
+
 ## 프로젝트 실행 환경 
 
 - Google Colab

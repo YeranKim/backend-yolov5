@@ -9,6 +9,8 @@
 
 - 동영상 파일을 detect하면 객체를 인식하여 보여줍니다
 - 프레임마다 인식된 객체의 이름, Bounding Box 좌표, 정확도를 시간과 함께 출력합니다
+<img width="565" alt="반디캠캡쳐" src="https://user-images.githubusercontent.com/65602906/206129639-5e6cb4ad-a76c-4497-895d-4c1c86acf94c.png">
+
 
 </br>
 
